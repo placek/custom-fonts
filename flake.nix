@@ -11,12 +11,12 @@
       pkgs         = import nixpkgs { inherit system; };
       custom-fonts = pkgs.stdenv.mkDerivation {
         name         = "custom-fonts";
-        version      = "v1.0";
+        version      = "v1.1";
         src          = ./shared;
         buildPhase   = "";
         installPhase = ''
           runHook preInstall
-          fontdir="$out/share/fonts/truetype"
+          fontdir="$out/share"
           mkdir -p $fontdir
           cp $src/* $fontdir
           runHook postInstall
