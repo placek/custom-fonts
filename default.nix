@@ -3,7 +3,7 @@
 }:
 pkgs.stdenv.mkDerivation {
   name         = "custom-fonts";
-  version      = "v1.4";
+  version      = "v1.5";
   src          = ./src;
   buildPhase   = "";
   installPhase = ''
